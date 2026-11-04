@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mauricio Choque Bernal | Desarrollador de software</title>
+<meta name="description" content="Portafolio de Mauricio Choque Bernal, desarrollador de software. Sistemas con .NET, Angular y SQL Server.">
+<meta name="theme-color" content="#F6F8FB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  /* Aplica el tema guardado antes de pintar para evitar parpadeos */
+  try {
+    var t = localStorage.getItem("tema");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar" id="inicio">
+  <div class="wrap topbar__in">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand__mark" id="brandMark" aria-hidden="true">MC</span>
+      <span class="brand__name" id="brandName">Mauricio Choque</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#formacion">Formación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="topbar__actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar tema claro u oscuro">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero wrap" aria-labelledby="heroTitulo">
+    <div class="hero__text">
+      <img class="avatar" id="foto" alt="" width="132" height="132" hidden>
+      <p class="eyebrow" id="heroEyebrow">Desarrollador web</p>
+      <h1 id="heroTitulo">Mauricio Choque Bernal</h1>
+      <p class="hero__lead" id="heroLead"></p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn" href="#contacto">Contactar</a>
+      </div>
+      <ul class="hero__facts" id="heroFacts"></ul>
+    </div>
+
+    <figure class="stack" aria-label="Arquitectura en tres capas">
+      <div class="stack__layer stack__layer--1">
+        <span class="stack__tag">Presentación</span>
+        <span class="stack__tech" id="layer1">Angular</span>
+      </div>
+      <div class="stack__link" aria-hidden="true"></div>
+      <div class="stack__layer stack__layer--2">
+        <span class="stack__tag">Lógica de negocio</span>
+        <span class="stack__tech" id="layer2">.NET</span>
+      </div>
+      <div class="stack__link" aria-hidden="true"></div>
+      <div class="stack__layer stack__layer--3">
+        <span class="stack__tag">Datos</span>
+        <span class="stack__tech" id="layer3">SQL Server</span>
+      </div>
+      <figcaption>Así separo mis sistemas: cada capa con una sola responsabilidad.</figcaption>
+    </figure>
+  </section>
+
+  <section class="sec wrap" id="sobre-mi" aria-labelledby="t-sobre">
+    <h2 id="t-sobre">Sobre mí</h2>
+    <div class="about" id="aboutBody"></div>
+  </section>
+
+  <section class="sec wrap" id="habilidades" aria-labelledby="t-hab">
+    <h2 id="t-hab">Habilidades</h2>
+    <div class="skills" id="skills"></div>
+  </section>
+
+  <section class="sec wrap" id="proyectos" aria-labelledby="t-proy">
+    <h2 id="t-proy">Proyectos</h2>
+    <div class="projects" id="projects"></div>
+  </section>
+
+  <section class="sec wrap" id="formacion" aria-labelledby="t-form">
+    <h2 id="t-form">Formación</h2>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section class="sec wrap contact" id="contacto" aria-labelledby="t-cont">
+    <h2 id="t-cont">Contacto</h2>
+    <p class="contact__lead" id="contactLead"></p>
+    <ul class="contact__list" id="contactList"></ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <span id="footerText"></span>
+    <a href="#inicio">Volver arriba</a>
+  </div>
+</footer>
+
+<noscript>
+  <p style="padding:16px">Este portafolio necesita JavaScript activado para mostrar su contenido.</p>
+</noscript>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
